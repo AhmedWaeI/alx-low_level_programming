@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
- * main - A c program for printing size of data
+ * main - Entry Point
  * Return: 0 (Success)
  */
-int main(void) 
+int main(void)
 {
 	char c;
 	int i;
@@ -17,5 +17,4 @@ int main(void)
 	printf("Size of a long long int: %zu byte(s)\n", sizeof(ll));
 	printf("Size of a float: %zu byte(s)\n", sizeof(f));
 	return (0);
-return (0);			
 }
