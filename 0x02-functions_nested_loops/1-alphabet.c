@@ -1,4 +1,3 @@
-#include "main.c"
 /**
  *main - A c program for printing
  *Return: 0 (Success)
@@ -13,3 +12,4 @@ void print_alphabet(void)
         }
 	putchar('\n');
 }
+#include "main.c"
