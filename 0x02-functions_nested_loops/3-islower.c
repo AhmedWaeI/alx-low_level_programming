@@ -1,13 +1,15 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *_islower - returns 1 if lowercase otherwise 0
+ *print_alphabet - prints the alphabets
  *Return: 0 (Success)
  */
 
 int _islower(int c)
 {
-	char x = c;
+	char x;
+
+	x = c;
 	
 	if (x <= 'z' && x >= 'a')
 	{
