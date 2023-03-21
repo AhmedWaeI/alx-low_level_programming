@@ -1,11 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *islower - prints the alphabets
+ *_islower - prints the alphabets
  *Return: 0 (Success)
  */
 
-int islower(int c)
+int _islower(int c)
 {
 	char x = c;
 	
