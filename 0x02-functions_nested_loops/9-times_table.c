@@ -1,33 +1,39 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * times_table - prints the time table
  */
+
 void times_table(void)
 {
 	int i;
 	int j;
-	int x;
-	int z;
+	int k;
 
 	for (i = 0; i < 10; i++)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			x = i * j;
-			z = ((j + 1) * i);
-			if (j == 9)
+			k = j * i;
+			if (j == 0)
 			{
-				 printf("%d", x);
+				_putchar(k + '0');
 			}
-			else
+
+			if (k < 10 && j != 0)
 			{
-				if (z > 9)
-					printf("%d, ", x);
-				else
-					printf("%d,  ", x);
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(k + '0');
+			} else if (k >= 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar((k / 10) + '0');
+				_putchar((k % 10) + '0');
 			}
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
