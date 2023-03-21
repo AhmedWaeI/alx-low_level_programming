@@ -13,3 +13,4 @@ void print_alphabet(void)
         }
 	putchar('\n');
 }
+#include "main.c"
