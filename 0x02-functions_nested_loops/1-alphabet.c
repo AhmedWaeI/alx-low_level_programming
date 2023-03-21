@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  *main - A c program for printing
  *Return: 0 (Success)
