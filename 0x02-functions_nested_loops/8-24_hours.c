@@ -23,15 +23,24 @@ void jack_bauer(void)
 		if (m < 10)
 		{
 			if (h < 10)
+			{
 				printf("0%d:0%d", h, m);
-
-			printf("%d:0%d", h, m);
+			}
+			else
+			{
+				printf("%d:0%d", h, m);
+			}
 		}
 		if (m >= 10)
 		{
 			if (h < 10)
+			{
 				printf("0%d:%d", h, m);
-			printf("%d:%d", h, m);
+			}
+			else
+			{
+				printf("%d:%d", h, m);
+			}
 		}
 		putchar('\n');
 	}
