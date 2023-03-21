@@ -7,10 +7,11 @@
 void jack_bauer(void)
 {
 	int i;
-	int h;	
+
+	int h;
+
 	int m;
 
-	h = 0;	
 	for (i = 0; i < 1440; i++)
 	{
 		m = i % 60;	
