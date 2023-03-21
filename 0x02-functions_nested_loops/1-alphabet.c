@@ -1,4 +1,4 @@
-#include "main.h"
+#include "main.c"
 /**
  *main - A c program for printing
  *Return: 0 (Success)
