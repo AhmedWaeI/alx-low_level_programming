@@ -3,15 +3,11 @@
 /**
  * times_table - prints the time table
  */
-
 void times_table(void)
 {
 	int i;
-	
 	int j;
-
 	int x;
-
 	int z;
 
 	for (i = 0; i < 10; i++)
