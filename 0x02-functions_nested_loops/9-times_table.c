@@ -23,15 +23,11 @@ void times_table(void)
 			else
 			{
 				if (z  > 9)
-				{
 					printf("%d, ", x);
-				}
 				else
-				{
 					printf("%d,  ", x);
-				}
 			}
 		}
 		putchar('\n');
 	}
-}	
+}
