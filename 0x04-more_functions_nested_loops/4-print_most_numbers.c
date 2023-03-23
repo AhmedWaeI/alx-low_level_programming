@@ -17,5 +17,5 @@ void print_most_numbers(void)
 			printf("%d", i);
 		}
 	}
-	putchar('\n');
+	printf('\n');
 }
