@@ -1,4 +1,4 @@
-#include "main.hi"
+#include "main.h"
 #include <stdio.h>
 /**
  * _atoi - converts a string to an integer
@@ -56,20 +56,22 @@ int main(int argc, char *argv[])
 {
 	int i, j, k, s;
 
+	s = 0;
+
 	for (i = 1; i < argc; i++)
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 			if (argv[i][j] > '9' || argv[i][j] < '0')
 			{
-				printf("ERROR\n");
+				puts("ERROR");
 				return (1);
 			}
 		}
 	}
 	for (k = 1; k < argc; k++)
 	{
-		if (_atoi(argv[i]) > 0)
+		if (_atoi(argv[i]) >= 0)
 		s = s + _atoi(argv[i]);
 	}
 	printf("%d\n", s);
