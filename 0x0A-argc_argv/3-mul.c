@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
 	int i;
 	int p;
 
-	p=1;
+	p = 1;
 	
 	if (argc < 3 || argc > 3)
 	{
@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	for (i = 0; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
 		p = p * _atoi(argv[i]);
 	}
