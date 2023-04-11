@@ -54,7 +54,7 @@ int _atoi(char *s)
  */
 int main(int argc, char *argv[])
 {
-	int i,p;
+	int p;
 	
 	if (argc < 3 || argc > 3)
 	{
