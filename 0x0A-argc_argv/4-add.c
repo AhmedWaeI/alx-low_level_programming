@@ -54,7 +54,7 @@ int _atoi(char *s)
  */
 int main(int argc, char *argv[])
 {
-	int i, j, k, s;
+	int i, j, k, s, o;
 
 	s = 0;
 
@@ -71,8 +71,12 @@ int main(int argc, char *argv[])
 	}
 	for (k = 1; k < argc; k++)
 	{
-		if (_atoi(argv[i]) >= 0)
-		s = s + _atoi(argv[i]);
+		o = _atoi(argv[i]);
+
+		if (o >= 0)
+		{
+			s = s + o;
+		}
 	}
 	printf("%d\n", s);
 	return (0);
