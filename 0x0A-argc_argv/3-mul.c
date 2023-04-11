@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < argc; i++)
 	{
-		p = p * atoi(argv[i]);
+		p = p * _atoi(argv[i]);
 	}
 	printf("%d\n", p);
 	return (0);
