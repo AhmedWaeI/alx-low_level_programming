@@ -1,5 +1,6 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
+
 /**
  * _atoi - converts a string to an integer
  * @s: string to be converted
@@ -54,9 +55,9 @@ int _atoi(char *s)
  */
 int main(int argc, char *argv[])
 {
-	int i, j, k, s, o;
+	int sum, num, i, j, k;
 
-	s = 0;
+	sum = 0;
 
 	for (i = 1; i < argc; i++)
 	{
@@ -64,20 +65,21 @@ int main(int argc, char *argv[])
 		{
 			if (argv[i][j] > '9' || argv[i][j] < '0')
 			{
-				printf("ERROR");
+				puts("Error");
 				return (1);
 			}
 		}
 	}
+
 	for (k = 1; k < argc; k++)
 	{
-		o = _atoi(argv[k]);
-		if (o >= 0)
+		num = _atoi(argv[k]);
+		if (num >= 0)
 		{
-			s = s + o;
+			sum += num;
 		}
 	}
 
-	printf("%d\n", s);
+	printf("%d\n", sum);
 	return (0);
 }
