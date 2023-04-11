@@ -46,11 +46,11 @@ int _atoi(char *s)
 	return (n);
 }
 /**
- * main - print the multiply of arguments passed to the program
+ * main - multiplies two numbers
  * @argc: number of arguments
  * @argv: array of arguments
  *
- * Return: Always 0 (Success)
+ * Return: 0 (Success), 1 (Error)
  */
 int main(int argc, char *argv[])
 {
@@ -61,10 +61,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-
 	p = _atoi(argv[1]) * _atoi(argv[2]);
-
 	printf("%d\n", p);
-
 	return (0);
 }	
