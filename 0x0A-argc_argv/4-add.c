@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 		{
 			if (argv[i][j] > '9' || argv[i][j] < '0')
 			{
-				puts("ERROR");
+				printf("ERROR");
 				return (1);
 			}
 		}
@@ -72,12 +72,12 @@ int main(int argc, char *argv[])
 	for (k = 1; k < argc; k++)
 	{
 		o = _atoi(argv[k]);
-
 		if (o >= 0)
 		{
 			s = s + o;
 		}
 	}
+
 	printf("%d\n", s);
 	return (0);
 }
