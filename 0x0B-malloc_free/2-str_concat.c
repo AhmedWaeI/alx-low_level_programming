@@ -23,11 +23,13 @@ char *str_concat(char *s1, char *s2)
 
 	c = 0;
 
-	for (x = 0; s1[x] != '\0'; x++)
+	while (s1 && s1[x])
 	{
+		x++;
 	}
-	for (i = 0; s2[i] != '\0'; i++)
+	 while (s1 && s1[i])
         {
+                i++;
         }
 	p = malloc(sizeof(char) * (i + x + 1));
 	if (p == NULL)
