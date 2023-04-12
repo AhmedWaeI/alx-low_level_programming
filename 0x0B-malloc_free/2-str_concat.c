@@ -41,6 +41,6 @@ char *str_concat(char *s1, char *s2)
                 p[x] = s2[c];
 		c = c + 1;
 	}
-	p[x + i] = '\0'
+	p[x + i] = '\0';
 	return (p);
 }
