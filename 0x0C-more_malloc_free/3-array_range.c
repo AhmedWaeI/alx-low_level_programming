@@ -22,11 +22,11 @@ int *array_range(int min, int max)
 		return (NULL);
 	ptr = malloc(sizeof(int) * L);
 
-	for (i = min; i < max; i++)
+	for (i = min; i <= max; i++)
 	{
 		ptr[c] = i;
 		c++;
-		if (min == max)
+		if (min > max)
 			break;
 	}
 	return (ptr);
