@@ -38,8 +38,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
         {
 		s1 = "";
         }
-	ptr = malloc((sizeof(char) * (L1 + L2)) + 1);
-
+	if (n < L2)
+	{
+		ptr = malloc((sizeof(char) * (L1 + n) + 1);
+	}
+	else
+	{
+		ptr = malloc((sizeof(char) * (L1 + L2)) + 1);
+	}
 	if (ptr == NULL)
 	{
 		return (NULL);
@@ -68,13 +74,4 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
         }
 
 	return (ptr);
-}
-int main(void)
-{
-    char *concat;
-
-    concat = string_nconcat("Best ", "School !!!", 6);
-    printf("%s\n", concat);
-    free(concat);
-    return (0);
-}
+}}
