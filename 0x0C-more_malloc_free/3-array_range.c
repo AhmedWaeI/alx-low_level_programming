@@ -26,7 +26,7 @@ int *array_range(int min, int max)
 	{
 		ptr[c] = i;
 		c++;
-		if (min = max)
+		if (min == max)
 			break;
 	}
 	return (ptr);
