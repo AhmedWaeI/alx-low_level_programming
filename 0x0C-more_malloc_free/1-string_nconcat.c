@@ -1,45 +1,90 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
-
 /**
  * *string_nconcat - concatenates n bytes of a string to another string
  * @s1: string to append to
- * @s2: string to concatenate from
- * @n: number of bytes from s2 to concatenate to s1
- *
- * Return: pointer to the resulting string
+	@@ -11,79 +11,35 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *s;
-	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
+	unsigned int L1 = 0;
 
-	while (s1 && s1[len1])
-		len1++;
-	while (s2 && s2[len2])
-		len2++;
+	unsigned int L2 = 0;
 
-	if (n < len2)
-		s = malloc(sizeof(char) * (len1 + n + 1));
-	else
-		s = malloc(sizeof(char) * (len1 + len2 + 1));
+	unsigned int counter = 0;
 
-	if (!s)
-		return (NULL);
+	char *ptr;
 
-	while (i < len1)
+	unsigned int i;
+
+	unsigned int j;
+
+	if(s1
+
+	while(s1[L1])
 	{
-		s[i] = s1[i];
-		i++;
+		L1++;
+	}
+	if (L1 == 0)
+	{
+		s1 = "";
+		L = 1;
+	}
+	 while(s2[L2])
+        {
+                L2++;
+        }
+        if (L2 == 0)
+        {
+		s2 = "";
+		L2 = 1;
+        }
+	if (n < L2)
+	{
+		ptr = malloc(sizeof(char) * (L1 + n) + 1);
+	}
+	else
+	{
+		ptr = malloc(sizeof(char) * (L1 + L2) + 1);
+	}
+	if (ptr == NULL)
+	{
+		return (NULL);
 	}
 
-	while (n < len2 && i < (len1 + n))
-		s[i++] = s2[j++];
+	for (i = 0; i < L1; i++)
+	{
+		ptr[i] = s1[i];
+	}
 
-	while (n >= len2 && i < (len1 + len2))
-		s[i++] = s2[j++];
+	if (n < L2)
+	{
+		for (j = i; j < L1 + n; j++)
+		{
+			ptr[j] = s2[counter];
+			counter++;
+		}
+	}
+	if (n >= L2)
+        {
+                for (j = i; j < L2 + L1; j++)
+                {
+                        ptr[j] = s2[counter];
+			counter++;
+                }
+        }
 
-	s[i] = '\0';
+	return (ptr);
 
-	return (s);
+	ptr[j] = '\0';
+}
+int main(void)
+{
+    char *concat;
+
+    concat = string_nconcat("Best ", "School !!!", 6);
+    printf("%s\n", concat);
+    free(concat);
+    return (0);
 }
