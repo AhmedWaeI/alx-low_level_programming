@@ -1,5 +1,5 @@
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
  * *string_nconcat - concatenates n bytes of a string to another string
  * @s1: string to append to
@@ -40,11 +40,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
         }
 	if (n < L2)
 	{
-		ptr = malloc((sizeof(char) * (L1 + n) + 1));
+		ptr = malloc(sizeof(char) * (L1 + n) + 1);
 	}
 	else
 	{
-		ptr = malloc((sizeof(char) * (L1 + L2)) + 1));
+		ptr = malloc(sizeof(char) * (L1 + L2) + 1);
 	}
 	if (ptr == NULL)
 	{
@@ -74,4 +74,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
         }
 
 	return (ptr);
+}
+int main(void)
+{
+    char *concat;
+
+    concat = string_nconcat("Best ", "School !!!", 6);
+    printf("%s\n", concat);
+    free(concat);
+    return (0);
 }
