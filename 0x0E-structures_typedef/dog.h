@@ -1,8 +1,12 @@
 #ifndef DOG_H
 #define DOG_H
 /**
- * free_dog - frees memory allocated for a struct dog
- * @d: struct dog to free
+ * struct dog - a dog struct
+ * @name: dog's name
+ * @age: dog's age
+ * @owner: owner's name
+ *
+ * Description: just a long dog struct in a big kitty world
  */
 struct dog
 {
