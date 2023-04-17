@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * prints source file name
+ * main - prints the name of the file
  *
- * returns: Always 0.
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
