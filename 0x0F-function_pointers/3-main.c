@@ -7,13 +7,11 @@
  *
  * Return: Always 0 (Success)
  */
-int main(int args, char *argv[])
+int main(int args, char **argv)
 {
 	int x, y;
 
 	int (*function)(int,int);
-
-	char op;
 
 	if (args != 4)
 	{
@@ -32,9 +30,8 @@ int main(int args, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	op = *argv[2];
 
-	if ((op == '%' || op == '/') && y == 0)
+	if ((argv[2][0] == '%' || argv[2][0] == '/') && y == 0)
 	{
 		printf("Error\n");
 		exit(100);
