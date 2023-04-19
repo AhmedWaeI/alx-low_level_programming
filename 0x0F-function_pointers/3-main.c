@@ -20,18 +20,18 @@ int main(int args, char *argv[])
 		exit(98);
 	}
 
-	x = atoi(args[1]);
+	x = atoi(argv[1]);
 
-	y = atoi(args[3]);
+	y = atoi(argv[3]);
 
-	function = get_op_func(args[2]);
+	function = get_op_func(argv[2]);
 
 	if (!function)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	char op = args[2];
+	char op = argv[2];
 
 	if ((op == '%' || op == '/') && y == 0)
 	{
