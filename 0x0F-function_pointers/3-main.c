@@ -11,9 +11,10 @@ int main(int args, char *argv[])
 {
 	int x, y;
 
-	int *function(int,int);
+	int (*function)(int,int);
 
 	char op;
+
 	if (args != 4)
 	{
 		printf("Error\n");
@@ -31,7 +32,7 @@ int main(int args, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	char op = argv[2];
+	op = *argv[2];
 
 	if ((op == '%' || op == '/') && y == 0)
 	{
@@ -39,7 +40,7 @@ int main(int args, char *argv[])
 		exit(100);
 	}
 
-	printf("%d\n", function(x, y))
+	printf("%d\n", function(x, y));
 
 	return (0);
 }
