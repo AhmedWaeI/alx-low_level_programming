@@ -7,6 +7,7 @@
 void print_all(const char * const format, ...)
 {
 	int i = 0;
+	char *s;
 	char *separator = "";
 	va_list args;
 
@@ -28,7 +29,10 @@ void print_all(const char * const format, ...)
 					printf("%s%d", separator, va_arg(args, int));
 					break;
 				case 's':
-					printf("%s%s", separator, va_arg(args, char *));
+					s = va_arg(args, char *);
+					if (s == NULL)
+						s = "(nil)"
+					printf("%s%s", separator, s);
 			}
 			i++;
 			separator = ", ";
