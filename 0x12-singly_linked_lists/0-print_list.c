@@ -42,7 +42,7 @@ size_t print_list(const list_t *h)
 		else
 		{
 			printf("[%ld] %s\n", strllen(current->str), current->str);
-			ui++;
+			i++;
 			current = current->next;
 		}
 	}
