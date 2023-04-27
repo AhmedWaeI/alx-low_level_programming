@@ -26,26 +26,25 @@ unsigned long int strllen(const char *s)
  *
  * Return: the number of nodes printed
  */
-size_t print_list(const list_t* h)
+size_t print_list(const list_t *h)
 {
-    size_t i = 0;
-   const list_t* current = h;
+	size_t i = 0;
+	const list_t *current = h;
 
-    while (current != NULL)
-    {
-	    if (current->str == NULL)
-	    {
-		    printf("[%d] %s\n", 0, "(nil)");
-		    i++;
-		    current = current->next;
-	    }
-	    else 
-	    {
-		    printf("[%ld] %s\n", strllen(current->str), current->str ? current->str : "(nil)");
-		    i++;
-		    current = current->next;
-	    }
-    }
-    return (i);
-
+	while (current != NULL)
+	{
+		if (current->str == NULL)
+		{
+			printf("[%d] %s\n", 0, "(nil)");
+			i++;
+			current = current->next;
+		}
+		else
+		{
+			printf("[%ld] %s\n", strllen(current->str), current->str);
+			ui++;
+			current = current->next;
+		}
+	}
+	return (i);
 }
