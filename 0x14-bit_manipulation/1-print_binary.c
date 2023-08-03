@@ -1,20 +1,23 @@
 #include "main.h"
+
 /**
- * binary_to_uint - converts a binary number to an unsigned int
+ * get_bit - returns the value of a bit at a given index.
  *
- * @b: pointer to a string of 0 and 1 chars
+ * @n: unsigned long int number
+ * @index: unsigned int index
  *
- * Return: the converted number or 0 if
- * there is one or more chars in b that is not 0 or 1
- * if b is NULL
+ * Return: the  bit at the index or -1 if an error occured
  */
 
-void print_binary(unsigned long int n) {
+
+void print_binary(unsigned long int n)
+{
 	unsigned long int i = 1UL << (sizeof(unsigned long int) * 8 - 1);
 	int flag = 0;
+
 	while (i > 0)
 	{
-		if (n & i) 
+		if (n & i)
 		{
 			flag = 1;
 			printf("1");
