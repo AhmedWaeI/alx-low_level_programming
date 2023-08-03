@@ -1,14 +1,10 @@
 #include "main.h"
 
 /**
- * get_bit - returns the value of a bit at a given index.
+ * print_binary - prints binary of int
  *
- * @n: unsigned long int number
- * @index: unsigned int index
- *
- * Return: the  bit at the index or -1 if an error occured
+ * @n: unsigned long in to be converted
  */
-
 
 void print_binary(unsigned long int n)
 {
